@@ -1,0 +1,15 @@
+<div class="input-group">
+    <span class="input-group-btn">
+        <!-- Quito el class para qeu sea dinamico de acuerdo al componente que lo llame
+        <button class="btn btn-primary" (click)="cambiarValor(-5)" type="button"> -->
+        <button  (click)="cambiarValor(-5)" [ngClass]="btnClass" type="button">
+            <i class="fa fa-minus"></i>
+        </button>
+    </span>
+
+    <input type="number" class="form-control" [ngClass]="{'is-invalid': progreso > 100 || progreso < 0}" (ngModelChange)="onChange($event)" [(ngModel)]="progreso" placeholder="Progreso">
+
+    <button (click)="cambiarValor(5)" [ngClass]="btnClass" type="button">
+        <i class="fa fa-plus"></i>
+    </button>
+</div>

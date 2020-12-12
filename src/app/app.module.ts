@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 
+
 // Optimización
 // import { LoginComponent } from './auth/login/login.component';
 // import { RegisterComponent } from './auth/register/register.component';
