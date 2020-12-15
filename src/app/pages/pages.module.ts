@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from '@angular/router';
 
-import { ChartsModule } from 'ng2-charts';
+// import { ChartsModule } from 'ng2-charts';
 
 // Modulos
 import { ComponetsModule } from '../components/componets.module';
@@ -32,7 +32,7 @@ import { PagesComponent } from './pages.component';
     RouterModule,
     FormsModule,
     ComponetsModule,
-    ChartsModule
+    // ChartsModule,
   ],
   exports: [
     DashboardComponent,
