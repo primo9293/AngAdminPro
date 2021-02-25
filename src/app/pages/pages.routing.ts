@@ -7,6 +7,8 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { AuthGuard } from '../guards/auth.guard';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,7 @@ const routes: Routes = [
         // path: '',
         path: 'dashboard',
         component: PagesComponent,
+        canActivate: [AuthGuard],
         children: [
           // { path: 'dashboard', component: DashboardComponent }, // dashboard
           { path: '', component: DashboardComponent, data: {titulo: 'Dashboard'}},             // dashboard
@@ -22,6 +25,7 @@ const routes: Routes = [
           { path: 'accountsettings', component: AccountSettingsComponent, data: {titulo: 'Ajustes'}},
           { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'}},
           { path: 'rxjs', component: RxjsComponent, data: {titulo: 'Rxjs'}},
+          { path: 'perfil', component: PerfilComponent, data: {titulo: 'Perfil'}},
           // { path: '', redirectTo: '/dashboard', pathMatch: 'full'}, Como ya esta en la linea 16 no hay necesidad de esta linea
         ]
       },
