@@ -9,6 +9,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { PerfilComponent } from './perfil/perfil.component';
+import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,8 @@ const routes: Routes = [
           { path: 'rxjs', component: RxjsComponent, data: {titulo: 'Rxjs'}},
           { path: 'perfil', component: PerfilComponent, data: {titulo: 'Perfil'}},
           // { path: '', redirectTo: '/dashboard', pathMatch: 'full'}, Como ya esta en la linea 16 no hay necesidad de esta linea
+          // Mantenimientos 
+          { path: 'usuarios', component: UsuariosComponent, data: {titulo: 'Usuarios de Aplicacion'}},
         ]
       },
 ];

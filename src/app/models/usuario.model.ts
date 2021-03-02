@@ -22,10 +22,12 @@ export class Usuario {
         // base_url/upload/medicos/no-image
         // console.log('this.img',this.img);
         // console.log('base_url',base_url);
-        if (this.img.includes('http')) {
+        // console.log(base_url);
+        if ( !this.img ) {
+            return `${base_url}/upload/usuarios/no-image`;
+        } else if (this.img.includes('https')) {
             return this.img;
-        }
-        if (this.img) {
+        } else if (this.img) {
             return `${base_url}/upload/usuarios/${this.img}`
         } else {
             return `${base_url}/upload/usuarios/no-image`;
